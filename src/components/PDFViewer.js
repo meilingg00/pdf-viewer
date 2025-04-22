@@ -1,17 +1,24 @@
+// src/components/PDFViewer.js
 import React from 'react';
 import { Worker, Viewer } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 
-const PDFViewer = ({ url }) => {
+
+const App = () => {
   return (
     <div>
-      <h2>PDF Viewer</h2>
-      <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}>
-        <Viewer fileUrl={url} />
-      </Worker>
+      <header style={styles.header}>
+        <h1>My PDF Viewer</h1>
+      </header>
+      <main>
+        <div style={styles.viewerContainer}>
+          <h2>PDF viewer is working!</h2>
+        </div>
+      </main>
     </div>
   );
 };
+
 
 export default PDFViewer;
